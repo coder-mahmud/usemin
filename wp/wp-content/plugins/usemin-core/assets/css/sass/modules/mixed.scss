@@ -1,0 +1,58 @@
+.bar{
+	position: absolute;
+	height: 100%;
+	width: 2px;
+	top: 0;
+	right: 0;
+	transform:rotate(12deg);
+	background: #F7941D;
+}
+
+.dot{
+	height: 5px;
+	width: 5px;
+	background-color:#F7941D;
+	display: inline-block;
+	margin:0 4px;
+}
+
+.gform_footer{
+	.gform_button{
+		background-color: #f7941d;
+		border:1px solid #f7941d;
+		color:#fff;
+		padding:7px 15px;
+		transition:all .5s ease;
+		cursor:pointer;
+		text-transform: uppercase;
+		font-weight: 600;
+		 font-family: 'Gotham' !important;
+
+		&:hover{
+			color:#f7941d;
+			background-color:#fff;
+		}
+	}
+}
+
+/* Oxygen Stuffs */
+.t-flow {
+   display: flex!important;
+   height: auto;
+   min-height: 0;
+   max-height: 0;
+   padding-top: 0;
+   padding-bottom: 0;
+   overflow: hidden;
+   transition: max-height 0.7s ease-in-out, padding 0.7s ease-in-out;
+}
+.oxy-toggle[class*=expanded] + .t-flow {
+    max-height: 100px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+
+.t-auto-close .oxy-expand-collapse-icon::before, .t-auto-close .oxy-expand-collapse-icon::after{
+	background-color:#F7941D !important;
+}

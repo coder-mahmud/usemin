@@ -1,0 +1,43 @@
+body, html { overflow-x:hidden; }
+
+body{
+
+  font-family: 'Gotham' !important;
+  h1,h2,h3,h4,h5,h6,p,a{
+    font-family: 'Gotham' !important;
+  }
+}
+
+/** { outline: 1px red solid !important; visibility: visible !important }*/
+
+@media only screen and (max-width: 1199px){
+
+	body{
+		h2, h3, h4, h5, h6{
+			font-size: 25px;
+		}
+
+		h4{
+			font-size: 20px;
+		}		
+	}
+
+
+}
+
+
+@media only screen and (max-width: 991px){
+	
+
+}
+
+
+@media only screen and (max-width: 767px){
+	
+
+}
+
+
+@media only screen and (max-width: 480px){
+	
+}

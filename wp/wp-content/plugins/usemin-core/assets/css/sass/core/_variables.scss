@@ -1,0 +1,85 @@
+
+@mixin extraLargeDesktop{
+	@media only screen and(min-width: 2000px){
+		@content;
+	}
+}
+
+
+@mixin twelveToFourteenHalf{
+	@media only screen and(min-width: 1200px) and(max-width: 1450px) {
+		@content;
+	}
+}
+
+
+@mixin twelveToFourteen{
+	@media only screen and(min-width: 1200px) and(max-width: 1400px) {
+		@content;
+	}
+}
+
+@mixin extraLarge{
+	@media only screen and(min-width: 1200px){
+		@content;
+	}
+}
+
+
+@mixin laptop{
+	@media only screen and(max-width: 1199px){
+		@content;
+	}
+}
+
+@mixin largeToLaptop{
+	@media only screen and(min-width: 992px) and(max-width: 1199px){
+		@content;
+	}
+}
+
+
+@mixin minLaptop{
+	@media only screen and(min-width: 992px){
+		@content;
+	}
+}
+
+
+@mixin large{
+	@media only screen and(max-width: 991px){
+		@content;
+	}
+}
+
+
+@mixin minLarge{
+	@media only screen and(min-width: 768px){
+		@content;
+	}
+}
+
+
+@mixin mediumToLarge{
+	@media only screen and(min-width: 768px) and(max-width: 991px){
+		@content;
+	}
+}
+
+@mixin medium{
+	@media only screen and(max-width: 767px){
+		@content;
+	}
+}
+
+@mixin small{
+	@media only screen and(max-width: 575px){
+		@content;
+	}
+}
+
+@mixin extraSmall{
+	@media only screen and(max-width: 480px){
+		@content;
+	}
+}

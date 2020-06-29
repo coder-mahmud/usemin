@@ -1,0 +1,213 @@
+.attorneys{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+
+	.single_attorney{
+		width: 33.33%;
+		padding:25px;
+		
+		margin-bottom: 30px;
+
+		.attorney_content{
+			background-size: cover;
+			height: 300px;
+			position: relative;
+			display: block;
+			overflow: hidden;
+
+			img{
+				width: 100%;
+			}
+
+			.attorney_overlay{
+				background:rgba(0,0,0,.7);
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				text-align: center;
+				opacity: 0;
+				visibility: hidden;
+				transition: all .5s ease;
+				top:0;
+				left: 0;
+				padding: 15px;
+
+				.overlay_content{
+				    color: #fff;
+				    display: flex;
+				    justify-content: center;
+				    align-items: center;
+				    flex-direction: column;
+				    height: 100%;
+				    border: 1px solid #f7941d;
+					.name_holder{
+						height: 45px;
+						overflow: hidden;						
+					}
+					.name{
+						top:30px;
+						position: relative;
+						transition: all .7s ease;
+					}
+					.designation{
+						color:#f7941d;
+					}
+
+				}
+			}
+
+			&:hover{
+				.attorney_overlay{
+					opacity: 1;
+					visibility: visible;
+
+					.overlay_content{
+						.name{
+							top: 0;
+						}
+					}
+				}
+			}
+
+
+
+
+		}
+
+
+
+		@include medium{
+			width: 50%;
+		}
+		@include extraSmall{
+			width: 100%;
+		}
+
+	}
+}
+
+
+.attorney_popup {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #252525;
+    left: 0;
+    display:flex;
+    flex-wrap: nowrap;
+    padding: 70px;
+    overflow: scroll;
+    opacity: 0;
+    visibility:hidden;
+    transform:scale(1.2);
+    transition:all .5s ease;
+
+    @include medium{
+    	flex-wrap: wrap;
+    }
+
+    &.visible{
+	    opacity: 1;
+	    visibility:visible;
+	    transform:scale(1);  	
+    }
+
+    .image{
+    	width: 50%;
+	    display: flex;
+	    padding-right: 50px;
+	    align-items: center;
+	    justify-content: flex-end;
+
+		@include medium{
+			width: 100%;
+			justify-content: center;
+			margin-bottom: 50px;
+		}		
+
+
+    }
+
+    .text{
+    	width: 50%;
+		@include medium{
+			width: 100%;
+		}
+
+
+    	.info_block{
+    		margin-bottom: 35px;
+
+    		.title{
+    			/*color:#b2a99f;*/
+    			color:#f7941d;
+    			text-transform: uppercase;
+    		}
+
+    		.value{
+    			color:#fff;
+    		}
+
+    		p{
+    			color:#fff;
+    			font-size: 18px;
+    			line-height: 30px;
+    		}
+
+    		.socials{
+    			margin-top: 15px;
+    			a{
+    				margin-right: 10px;
+
+    				&:hover{
+    					i{
+    						color:#f7941d;
+    						background:#fff;
+    					}
+    				}
+    			}
+    			i{
+    				background:#f7941d;
+    				color:#fff;
+    				padding:15px;
+    				font-size: 20px;
+    				transition:all .3s ease;
+    			}
+    		}
+
+
+			&:last-child{
+				margin-bottom: 70px;
+				min-height: 1px;
+			}
+    	}
+
+    }
+
+    .closer{
+    	position: absolute;
+    	right: 50px;
+    	cursor: pointer;
+    	img{
+			width: 50px;
+
+			@include medium{
+				width: 40px;
+			}
+			@include small{
+				width: 25px;
+			}	
+    	}
+    }
+
+
+}
+
+body.popup_open{
+	overflow-y:hidden;
+	height: 100vh;
+}
